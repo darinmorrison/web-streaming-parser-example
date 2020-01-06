@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "crates/app-main",
+    "crates/app-renderer"
+]

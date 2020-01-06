@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "name": "web-streaming-parser-example",
+  "version": "0.1.0",
+  "author": "Darin Morrison <darinmorrison@users.noreply.github.com>",
+  "scripts": {
+    "build": "rimraf crates/app-main/pkg && rimraf crates/app-renderer/pkg && npm run pack-app-main && npm run pack-app-renderer",
+    "pack-app-main": "cd crates/app-main && wasm-pack build --target nodejs",
+    "pack-app-renderer-build": "cd crates/app-renderer && wasm-pack build --target web",
+    "pack-app-renderer-postprocess": "cd crates/app-renderer && perl -pi -e \"s/^\\bimport\\b/\\/\\/ import/g\" pkg/app_renderer.js",
+    "pack-app-renderer": "npm run pack-app-renderer-build && npm run pack-app-renderer-postprocess",
+    "start": "electron crates/app-main/pkg/app_main.js"
+  },
+  "dependencies": {
+    "electron": "^8.0.0-beta.5",
+    "rimraf": "^3.0.0"
+  }
+}
