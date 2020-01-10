@@ -6,7 +6,7 @@ An example showing the use of nom streaming parsers with an Electron GUI
 
 ## Status
 
-Not working yet.
+Working.
 
 ## Requirements
 
