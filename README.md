@@ -25,4 +25,4 @@ $ npm start
 
 ## Usage
 
-Input identifiers (e.g., "foo", "bar", "baz", without quotes) and parentheses (e.g., "(" or ")" without quotes) into the prompt field and press the `<enter>` key. This will feed data into the streaming token parser one line at a time. Identifiers will be parsed as symbols, delimited either by parentheses or spaces. Data passed into the parser will be displayed in the `Chunks` field. Parsed tokens will be added to the displayed in the `Tokens` field.
+Input identifiers (e.g., "foo", "bar", "baz", without quotes) and parentheses (e.g., "(" or ")" without quotes) into the prompt field and press the `<enter>` key. This will feed data into the streaming token parser one line at a time. Identifiers will be parsed as symbols, delimited either by parentheses or spaces. Data passed into the parser will be displayed in the `Chunks` field. Parsed tokens will be displayed in the `Tokens` field.
